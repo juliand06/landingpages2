@@ -1,0 +1,291 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff;
+    color: #222222;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+.landing-container {
+    max-width: 1400px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 800px;
+    gap: 40px;
+}
+
+/* Base Typography */
+.main-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 400;
+    line-height: 1.1;
+    margin-bottom: 25px;
+    color: #1a1a1a;
+    letter-spacing: -0.5px;
+}
+
+.sub-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    font-weight: 400;
+    line-height: 1.1;
+    color: #1a1a1a;
+    letter-spacing: -0.5px;
+}
+
+.description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555555;
+    margin-bottom: 30px;
+}
+
+/* Left Content */
+.content-left {
+    flex: 0 0 350px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+}
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 30px;
+    background-color: #5d8e7c;
+    /* Green matched to button */
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 40px;
+    width: max-content;
+    margin-bottom: auto;
+}
+
+.bottom-left-images {
+    display: flex;
+    gap: 15px;
+    align-items: flex-end;
+    margin-top: 50px;
+}
+
+/* Image Shapes */
+.img-capsule {
+    overflow: hidden;
+    border-radius: 100px;
+    background-color: #e5e5e5;
+}
+
+.img-capsule img,
+.img-arch img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.cap-small {
+    width: 110px;
+    height: 180px;
+}
+
+.cap-medium {
+    width: 120px;
+    height: 200px;
+    margin-bottom: 20px;
+    /* Offset to push it slightly up */
+}
+
+/* Center Content */
+.content-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 5;
+}
+
+.center-image-wrapper {
+    position: relative;
+    /* Create the blue outline via pseudo element based on Figma screenshot */
+    padding: 15px;
+}
+
+.large-arch {
+    width: 320px;
+    height: 550px;
+    border-radius: 160px;
+    overflow: hidden;
+    background-color: #e5e5e5;
+    position: relative;
+    z-index: 2;
+}
+
+/* Image Star Decor */
+.decor-img {
+    position: absolute;
+    z-index: 10;
+    width: 45px;
+    height: auto;
+    object-fit: contain;
+}
+
+.img-star-1 {
+    top: -20px;
+    left: -20px;
+}
+
+/* Right Content */
+.content-right {
+    flex: 0 0 350px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    position: relative;
+}
+
+.top-right-images {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+.cap-tall {
+    width: 120px;
+    height: 240px;
+    border-radius: 100px;
+    overflow: hidden;
+    background-color: #e5e5e5;
+}
+
+.cap-medium-right {
+    width: 120px;
+    height: 180px;
+    margin-top: 40px;
+    /* offset down */
+}
+
+.img-star-2 {
+    position: relative;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.right-desc {
+    max-width: 280px;
+}
+
+
+/* Responsiveness */
+@media (max-width: 1100px) {
+
+    .content-left,
+    .content-right {
+        flex: 0 0 300px;
+    }
+
+    .large-arch {
+        width: 260px;
+        height: 480px;
+    }
+}
+
+@media (max-width: 992px) {
+    .landing-container {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+    }
+
+    .content-left {
+        padding-top: 0;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .bottom-left-images {
+        margin-top: 30px;
+    }
+
+    .content-right {
+        padding-top: 0;
+        align-items: center;
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .large-arch {
+        width: 300px;
+        height: 500px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 15px;
+    }
+
+    .main-heading {
+        font-size: 2.2rem;
+    }
+
+    .sub-heading {
+        font-size: 1.8rem;
+    }
+
+    .description {
+        font-size: 0.95rem;
+    }
+
+    .btn-primary {
+        padding: 10px 24px;
+        font-size: 0.9rem;
+    }
+
+    .content-left,
+    .content-right {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+
+    .large-arch {
+        width: 240px;
+        height: 400px;
+    }
+
+    .cap-small {
+        width: 80px;
+        height: 140px;
+    }
+
+    .cap-medium {
+        width: 90px;
+        height: 160px;
+    }
+
+    .cap-tall {
+        height: 180px;
+    }
+
+    .bottom-left-images,
+    .top-right-images {
+        gap: 10px;
+    }
+}
