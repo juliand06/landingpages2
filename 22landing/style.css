@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-dark: #0d1b2e;
+    --bg-section: #111d30;
+    --accent: #4fd1c5;
+    --text-white: #ffffff;
+    --text-muted: #a0aec0;
+    --font: 'Inter', sans-serif;
+}
+
+body {
+    font-family: var(--font);
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.btn-outline {
+    display: inline-block;
+    margin-top: 24px;
+    padding: 12px 32px;
+    border: 2px solid var(--text-white);
+    border-radius: 4px;
+    color: var(--text-white);
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    transition: background 0.25s, color 0.25s;
+}
+
+.btn-outline:hover {
+    background-color: var(--text-white);
+    color: var(--bg-dark);
+}
+
+.hero {
+    display: flex;
+    align-items: flex-start;
+    gap: 48px;
+    padding: 80px 80px 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero__text {
+    flex: 1;
+    max-width: 460px;
+    padding-top: 20px;
+}
+
+.hero__title {
+    font-size: 52px;
+    font-weight: 800;
+    line-height: 1.15;
+    color: var(--text-white);
+    margin-bottom: 20px;
+}
+
+.hero__desc {
+    font-size: 14px;
+    color: var(--text-muted);
+    max-width: 380px;
+    line-height: 1.8;
+}
+
+.hero__images {
+    display: flex;
+    gap: 16px;
+    align-items: flex-end;
+    flex-shrink: 0;
+}
+
+.hero__img-wrap {
+    border-radius: 200px;
+    overflow: hidden;
+    width: 160px;
+}
+
+.hero__img-wrap--tall {
+    height: 340px;
+}
+
+.hero__img-wrap--short {
+    height: 260px;
+    align-self: flex-start;
+}
+
+.features {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 80px 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.features__divider {
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent);
+    border-radius: 2px;
+}
+
+.features__list {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    max-width: 480px;
+    margin-left: auto;
+}
+
+.feature-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.feature-item__number {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text-white);
+}
+
+.feature-item__text {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+.banner {
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    padding: 0 80px;
+}
+
+.banner__img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.gallery {
+    max-width: 1200px;
+    margin: 0 auto 80px;
+    padding: 0 80px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.gallery__item {
+    border-radius: 12px;
+    overflow: hidden;
+    height: 200px;
+}
+
+.gallery__item img {
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.gallery__item:hover img {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        padding: 40px 24px 40px;
+        gap: 32px;
+    }
+
+    .hero__title {
+        font-size: 36px;
+    }
+
+    .hero__images {
+        align-self: center;
+    }
+
+    .hero__img-wrap--tall {
+        height: 220px;
+        width: 120px;
+    }
+
+    .hero__img-wrap--short {
+        height: 170px;
+        width: 120px;
+    }
+
+    .features {
+        padding: 20px 24px 40px;
+    }
+
+    .features__list {
+        margin-left: 0;
+        max-width: 100%;
+    }
+
+    .banner {
+        padding: 0 24px;
+    }
+
+    .banner__img {
+        height: 200px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+        padding: 0 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 30px 16px;
+    }
+
+    .hero__title {
+        font-size: 28px;
+    }
+
+    .hero__desc {
+        font-size: 13px;
+    }
+
+    .hero__img-wrap--tall {
+        height: 180px;
+        width: 100px;
+    }
+
+    .hero__img-wrap--short {
+        height: 140px;
+        width: 100px;
+    }
+
+    .btn-outline {
+        padding: 10px 24px;
+        font-size: 14px;
+    }
+
+    .features {
+        padding: 15px 16px 30px;
+    }
+
+    .feature-item__number {
+        font-size: 22px;
+    }
+
+    .banner {
+        padding: 0 16px;
+    }
+
+    .banner__img {
+        height: 160px;
+    }
+
+    .gallery {
+        padding: 0 16px;
+        gap: 12px;
+    }
+
+    .gallery__item {
+        height: 160px;
+    }
+}
