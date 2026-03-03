@@ -1,5 +1,10 @@
 ## trabajo landing pages
+## Acceso al Proyecto
 
+Puedes visualizar las landing pages en vivo a través del siguiente enlace (requiere que el servidor local esté activo):
+
+* **URL del Túnel:** [https://qf84r6tf-5501.use2.devtunnels.ms/](https://qf84r6tf-5501.use2.devtunnels.ms/)
+* **Puerto Local:** 5501
 # Proyecto de Landing Pages
 
 Este repositorio contiene una colección de diversas páginas de aterrizaje (landing pages) diseñadas para diferentes propósitos, desde tecnología y bienestar hasta viajes y diseño retro.
